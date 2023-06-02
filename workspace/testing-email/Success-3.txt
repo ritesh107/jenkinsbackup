@@ -1,3 +1,0 @@
-testing-email - Build # 3 - Successful:
-
-Check console output at http://3.111.30.64:8080/job/testing-email/3/ to view the results.

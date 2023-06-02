@@ -1,3 +1,0 @@
-Trail » testing-email - Build # 12 - Successful:
-
-Check console output at https://172.31.1.143:8080/job/Trails/job/testing-email/12/ to view the results.

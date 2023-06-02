@@ -1,3 +1,0 @@
-Trail » testing-email - Build # 5 - Successful:
-
-Check console output at http://ec2-3-109-210-236.ap-south-1.compute.amazonaws.com:8080/job/Trails/job/testing-email/5/ to view the results.
