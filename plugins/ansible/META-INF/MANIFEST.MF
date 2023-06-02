@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Jenkins Ansible plugin
+Specification-Version: 0.0
+Implementation-Title: Jenkins Ansible plugin
+Implementation-Version: 205.v4cb_c48657c21
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: ansible
+Short-Name: ansible
+Long-Name: Jenkins Ansible plugin
+Plugin-Version: 205.v4cb_c48657c21
+Hudson-Version: 2.387.2
+Jenkins-Version: 2.387.2
+Plugin-Dependencies: workflow-step-api:639.v6eca_cd8c04a_a_;resolution:=
+ optional,credentials:1236.v31e44e6060c0,job-dsl:1.83;resolution:=option
+ al,plain-credentials:143.v1b_df8b_d3b_e48,ssh-credentials:305.v8f438150
+ 1156
+Plugin-Developers: 
+Plugin-License-Name: Apache License, Version 2.0
+Plugin-License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/ansible-plugi
+ n.git
+Plugin-ScmTag: 4cbc48657c21a65a917b3b3049918480198c0cfb
+Plugin-ScmUrl: https://github.com/jenkinsci/ansible-plugin
+Plugin-GitHash: 4cbc48657c21a65a917b3b3049918480198c0cfb
+Implementation-Build: 4cbc48657c21a65a917b3b3049918480198c0cfb
+

@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl plugin="git@5.0.2">
+  <head class="org.jenkinsci.plugins.github_branch_source.BranchSCMHead" plugin="github-branch-source@1703.vd5a_2b_29c6cdc">
+    <name>nirmala</name>
+  </head>
+  <hash>aecce4618e0344ed89e6f275f87b6bed4ab1f8a1</hash>
+</jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl>

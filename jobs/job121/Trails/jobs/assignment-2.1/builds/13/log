@@ -1,0 +1,26 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/Trails/assignment-2.1
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Trails/assignment-2.1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/opstree/spring3hibernate.git # timeout=10
+Fetching upstream changes from https://github.com/opstree/spring3hibernate.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/opstree/spring3hibernate.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 82d59771f414e2ea2583b200e688d2878c98cb29 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 82d59771f414e2ea2583b200e688d2878c98cb29 # timeout=10
+Commit message: "Updated path to correct value"
+ > git rev-list --no-walk 82d59771f414e2ea2583b200e688d2878c98cb29 # timeout=10
+[Checks API] No suitable checks publisher found.
+[assignment-2.1] $ /bin/sh -xe /tmp/jenkins1317445965335208998.sh
++ git branch -D ninja1
+Deleted branch ninja1 (was 82d5977).
++ echo ninja1 deleted
+ninja1 deleted
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS

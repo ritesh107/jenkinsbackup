@@ -1,0 +1,123 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<analysisReport plugin="analysis-model-api@11.2.0">
+  <id>-</id>
+  <name>-</name>
+  <originReportFile>-</originReportFile>
+  <subReports/>
+  <elements class="linked-hash-set">
+    <issue>
+      <category>BAD_PRACTICE</category>
+      <type>NM_FIELD_NAMING_CONVENTION</type>
+      <severity>LOW</severity>
+      <lineStart>0</lineStart>
+      <lineEnd>0</lineEnd>
+      <columnStart>0</columnStart>
+      <columnEnd>0</columnEnd>
+      <lineRanges/>
+      <id>ee7ebd2c-0f0e-417a-a98c-f27193af7f19</id>
+      <reference>50</reference>
+      <origin>findbugs</origin>
+      <originName>FindBugs</originName>
+      <moduleName>Spring3HibernateApp</moduleName>
+      <packageName>com.sample.bean</packageName>
+      <pathName>/var/lib/jenkins/workspace/Assignments/Assignment_4/Assignment_04</pathName>
+      <fileName>src/main/java/com/sample/bean/EmployeeBean.java</fileName>
+      <message>The field name com.sample.bean.EmployeeBean.Name doesn&apos;t start with a lower case letter</message>
+      <description></description>
+      <fingerprint>971ce5d29894aea665efebd0b51adb89</fingerprint>
+    </issue>
+    <issue>
+      <category>BAD_PRACTICE</category>
+      <type>NM_FIELD_NAMING_CONVENTION</type>
+      <severity reference="../../issue/severity"/>
+      <lineStart>0</lineStart>
+      <lineEnd>0</lineEnd>
+      <columnStart>0</columnStart>
+      <columnEnd>0</columnEnd>
+      <lineRanges/>
+      <id>edee3550-b4a0-4f63-8c31-e6be238af33f</id>
+      <reference>50</reference>
+      <origin>findbugs</origin>
+      <originName>FindBugs</originName>
+      <moduleName>Spring3HibernateApp</moduleName>
+      <packageName reference="../../issue/packageName"/>
+      <pathName>/var/lib/jenkins/workspace/Assignments/Assignment_4/Assignment_04</pathName>
+      <fileName>src/main/java/com/sample/bean/FileBean.java</fileName>
+      <message>The field name com.sample.bean.FileBean.Name doesn&apos;t start with a lower case letter</message>
+      <description></description>
+      <fingerprint>13dd9364b3663b654408cbc6469060ed</fingerprint>
+    </issue>
+    <issue>
+      <category>SECURITY</category>
+      <type>PT_RELATIVE_PATH_TRAVERSAL</type>
+      <severity>NORMAL</severity>
+      <lineStart>29</lineStart>
+      <lineEnd>29</lineEnd>
+      <columnStart>0</columnStart>
+      <columnEnd>0</columnEnd>
+      <lineRanges>
+        <lineRange>
+          <start>26</start>
+          <end>26</end>
+        </lineRange>
+      </lineRanges>
+      <id>52bb685b-cf96-4f59-9c0b-2f746eaf7861</id>
+      <reference>50</reference>
+      <origin>findbugs</origin>
+      <originName>FindBugs</originName>
+      <moduleName>Spring3HibernateApp</moduleName>
+      <packageName>com.sample.servlet</packageName>
+      <pathName>/var/lib/jenkins/workspace/Assignments/Assignment_4/Assignment_04</pathName>
+      <fileName>src/main/java/com/sample/servlet/DownloadServlet.java</fileName>
+      <message>Relative path traversal in com.sample.servlet.DownloadServlet.doGet(HttpServletRequest, HttpServletResponse)</message>
+      <description></description>
+      <fingerprint>66ef0e4322e360bd3cdf795dcf8cdc79</fingerprint>
+    </issue>
+    <issue>
+      <category>BAD_PRACTICE</category>
+      <type>SE_NO_SERIALVERSIONID</type>
+      <severity reference="../../issue/severity"/>
+      <lineStart>21</lineStart>
+      <lineEnd>87</lineEnd>
+      <columnStart>0</columnStart>
+      <columnEnd>0</columnEnd>
+      <lineRanges/>
+      <id>7b26e424-6f07-4e88-a75e-b6f48fd05b64</id>
+      <reference>50</reference>
+      <origin>findbugs</origin>
+      <originName>FindBugs</originName>
+      <moduleName>Spring3HibernateApp</moduleName>
+      <packageName reference="../../issue[3]/packageName"/>
+      <pathName>/var/lib/jenkins/workspace/Assignments/Assignment_4/Assignment_04</pathName>
+      <fileName reference="../../issue[3]/fileName"/>
+      <message>com.sample.servlet.DownloadServlet is Serializable; consider declaring a serialVersionUID</message>
+      <description></description>
+      <fingerprint>e2ac6e205dd353a9a76aca83312791</fingerprint>
+    </issue>
+    <issue>
+      <category>BAD_PRACTICE</category>
+      <type>SE_NO_SERIALVERSIONID</type>
+      <severity reference="../../issue/severity"/>
+      <lineStart>25</lineStart>
+      <lineEnd>89</lineEnd>
+      <columnStart>0</columnStart>
+      <columnEnd>0</columnEnd>
+      <lineRanges/>
+      <id>47e55d49-504e-4d3e-93f2-cd61aae6bb83</id>
+      <reference>50</reference>
+      <origin>findbugs</origin>
+      <originName>FindBugs</originName>
+      <moduleName>Spring3HibernateApp</moduleName>
+      <packageName reference="../../issue[3]/packageName"/>
+      <pathName>/var/lib/jenkins/workspace/Assignments/Assignment_4/Assignment_04</pathName>
+      <fileName>src/main/java/com/sample/servlet/FileUploadServlet.java</fileName>
+      <message>com.sample.servlet.FileUploadServlet is Serializable; consider declaring a serialVersionUID</message>
+      <description></description>
+      <fingerprint>716114705c82c679b87ab6c8ccb1aa3d</fingerprint>
+    </issue>
+  </elements>
+  <infoMessages/>
+  <errorMessages/>
+  <countersByKey/>
+  <duplicatesSize>0</duplicatesSize>
+</analysisReport>

@@ -1,0 +1,67 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1295.v395eb_7400005">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2131.vb_9788088fdb_5"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2131.vb_9788088fdb_5">
+      <jobProperties/>
+      <triggers>
+        <string>hudson.triggers.SCMTrigger</string>
+      </triggers>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>for task -02</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.7.13">
+      <gitLabConnection></gitLabConnection>
+      <jobCredentialId></jobCredentialId>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers>
+        <hudson.triggers.SCMTrigger>
+          <spec>*/5 * * * *</spec>
+          <ignorePostCommitHooks>false</ignorePostCommitHooks>
+        </hudson.triggers.SCMTrigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3659.v582dc37621d8">
+    <script>pipeline {
+    agent any
+    tools {
+         git &apos;Default&apos;
+         jdk &apos;java&apos;
+        maven &apos;maven&apos;
+    }
+    triggers {
+      pollSCM &apos;*/5 * * * *&apos;
+    }
+
+    stages {
+        stage(&apos;repo clone&apos;) {
+            steps {
+                git &apos;https://github.com/opstree/spring3hibernate.git&apos;
+            }
+        }
+        stage(&apos;Build&apos;) {
+            steps {
+              sh &apos;&apos;&apos;mvn clean package&apos;&apos;&apos;
+          
+            }
+        }
+         stage(&apos;Slack Notification&apos;) {
+            steps {
+             slackSend channel: &apos;jenkins_report&apos;, color: &apos;#439FE0&apos;, message: &apos;Pipeline 02 Run Successfully&apos;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;
+            }
+        }  
+    }
+}
+//slackSend botUser: true, channel: &apos;opstree&apos;, color: &apos;#439FE0&apos;, message: &apos;Pipeline 02 Run Successfully&apos;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

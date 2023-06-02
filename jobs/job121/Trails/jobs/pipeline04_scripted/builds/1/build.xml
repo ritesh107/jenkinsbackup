@@ -1,0 +1,151 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1295.v395eb_7400005">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>ritesh</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@656.va_a_ceeb_6ffb_f7">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@5.0.2">
+      <buildsByBranchName>
+        <entry>
+          <string>origin/ninja</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.2.0">
+              <sha1>7dd69492f68fc5584569cc5decea97aa84e62ada</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/ninja</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>1</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/opstree/spring3hibernate.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@408.v7d5b_135a_b_d49">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/opstree/spring3hibernate.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <hudson.tasks.junit.TestResultAction plugin="junit@1202.v79a_986785076">
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>0</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>3</totalCount>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <testData/>
+    </hudson.tasks.junit.TestResultAction>
+  </actions>
+  <queueId>707</queueId>
+  <timestamp>1685472437144</timestamp>
+  <startTime>1685472437148</startTime>
+  <result>FAILURE</result>
+  <duration>26913</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>node {
+    def mvnHome
+    stage(&apos;checkout&apos;) { // for display purposes
+        // Get some code from a GitHub repository
+        checkout scmGit(branches: [[name: &apos;*/master&apos;], [name: &apos;*/ninja&apos;]], extensions: [], userRemoteConfigs: [[url: &apos;https://github.com/opstree/spring3hibernate.git&apos;]])
+        // Get the Maven tool.
+        // ** NOTE: This &apos;M3&apos; Maven tool must be configured
+        // **       in the global configuration.
+        mvnHome = tool &apos;maven&apos;
+    }
+    stage(&apos;Build&apos;) {
+        // Run the maven build
+        withEnv([&quot;MVN_HOME=$mvnHome&quot;]) {
+            if (isUnix()) {
+                sh &apos;&quot;$MVN_HOME/bin/mvn&quot; -Dmaven.test.failure.ignore clean package&apos;
+            } else {
+                bat(/&quot;%MVN_HOME%\bin\mvn&quot; -Dmaven.test.failure.ignore clean package/)
+            }
+        }
+    }
+    stage(&apos;Results&apos;) {
+        junit &apos;**/target/surefire-reports/TEST-*.xml&apos;
+        archiveArtifacts &apos;target/*.jar&apos;
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>217300804</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>16150355</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1166902830</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>61694524</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>318764506</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>29</iota>
+    <head>1:29</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@5.0.2">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/opstree/spring3hibernate.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/ninja</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/Trails/pipeline04_scripted</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/Trails/jobs/pipeline04_scripted/builds/1/changelog7155624427945348244.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

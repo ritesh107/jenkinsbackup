@@ -1,0 +1,26 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>RHEL</name>
+  <description>For Red_Hat</description>
+  <remoteFS>/home/ec2-user/jenkins/</remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.SimpleScheduledRetentionStrategy">
+    <startTimeSpec>H 9-18 * * *
+</startTimeSpec>
+    <upTimeMins>540</upTimeMins>
+    <keepUpWhenActive>true</keepUpWhenActive>
+  </retentionStrategy>
+  <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@2.877.v365f5eb_a_b_eec">
+    <host>43.204.141.177</host>
+    <port>22</port>
+    <credentialsId>d0babd69-7c4b-499e-9dff-4b21e6b6df23</credentialsId>
+    <launchTimeoutSeconds>60</launchTimeoutSeconds>
+    <maxNumRetries>10</maxNumRetries>
+    <retryWaitTime>15</retryWaitTime>
+    <sshHostKeyVerificationStrategy class="hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy"/>
+    <tcpNoDelay>true</tcpNoDelay>
+  </launcher>
+  <label>RHEL</label>
+  <nodeProperties/>
+</slave>

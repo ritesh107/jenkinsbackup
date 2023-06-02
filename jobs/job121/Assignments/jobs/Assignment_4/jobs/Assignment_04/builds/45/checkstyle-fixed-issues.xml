@@ -1,0 +1,133 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<analysisReport plugin="analysis-model-api@11.2.0">
+  <id>-</id>
+  <name>-</name>
+  <originReportFile>-</originReportFile>
+  <subReports>
+    <analysisReport>
+      <id>checkstyle</id>
+      <name>CheckStyle</name>
+      <originReportFile>/var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</originReportFile>
+      <subReports/>
+      <elements class="linked-hash-set"/>
+      <infoMessages>
+        <string>Searching for all files in &apos;/var/lib/jenkins/workspace/Assignment_04&apos; that match the pattern &apos;**/checkstyle-result.xml&apos;</string>
+        <string>Traversing of symbolic links: enabled</string>
+        <string>-&gt; found 1 file</string>
+        <string>Successfully parsed file /var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</string>
+        <string>-&gt; found 813 issues (skipped 0 duplicates)</string>
+        <string>Successfully processed file &apos;target/checkstyle-result.xml&apos;</string>
+        <string>Post processing issues on &apos;Master&apos; with source code encoding &apos;UTF-8&apos;</string>
+        <string>Creating SCM blamer to obtain author and commit information for affected files</string>
+        <string>-&gt; No blamer installed yet. You need to install the &apos;git-forensics&apos; plugin to enable blaming for Git.</string>
+        <string>Resolving file names for all issues in workspace &apos;/var/lib/jenkins/workspace/Assignment_04&apos;</string>
+        <string>-&gt; resolved paths in source directory (16 found, 0 not found)</string>
+        <string>Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)</string>
+        <string>-&gt; resolved module names for 813 issues</string>
+        <string>Resolving package names (or namespaces) by parsing the affected files</string>
+        <string>-&gt; resolved package names of 16 affected files</string>
+        <string>No filter has been set, publishing all 813 issues</string>
+        <string>Creating fingerprints for all affected code blocks to track issues over different builds</string>
+        <string>-&gt; created fingerprints for 813 issues (skipped 0 issues)</string>
+      </infoMessages>
+      <errorMessages/>
+      <countersByKey/>
+      <duplicatesSize>0</duplicatesSize>
+    </analysisReport>
+    <analysisReport>
+      <id>-</id>
+      <name>-</name>
+      <originReportFile>-</originReportFile>
+      <subReports/>
+      <elements class="linked-hash-set"/>
+      <infoMessages/>
+      <errorMessages/>
+      <countersByKey/>
+      <duplicatesSize>0</duplicatesSize>
+    </analysisReport>
+  </subReports>
+  <elements class="linked-hash-set"/>
+  <infoMessages>
+    <string>Searching for all files in &apos;/var/lib/jenkins/workspace/Assignment_04&apos; that match the pattern &apos;**/checkstyle-result.xml&apos;</string>
+    <string>Traversing of symbolic links: enabled</string>
+    <string>-&gt; found 1 file</string>
+    <string>Successfully parsed file /var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</string>
+    <string>-&gt; found 813 issues (skipped 0 duplicates)</string>
+    <string>Successfully processed file &apos;target/checkstyle-result.xml&apos;</string>
+    <string>Post processing issues on &apos;Master&apos; with source code encoding &apos;UTF-8&apos;</string>
+    <string>Creating SCM blamer to obtain author and commit information for affected files</string>
+    <string>-&gt; No blamer installed yet. You need to install the &apos;git-forensics&apos; plugin to enable blaming for Git.</string>
+    <string>Resolving file names for all issues in workspace &apos;/var/lib/jenkins/workspace/Assignment_04&apos;</string>
+    <string>-&gt; resolved paths in source directory (16 found, 0 not found)</string>
+    <string>Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)</string>
+    <string>-&gt; resolved module names for 813 issues</string>
+    <string>Resolving package names (or namespaces) by parsing the affected files</string>
+    <string>-&gt; resolved package names of 16 affected files</string>
+    <string>No filter has been set, publishing all 813 issues</string>
+    <string>Creating fingerprints for all affected code blocks to track issues over different builds</string>
+    <string>-&gt; created fingerprints for 813 issues (skipped 0 issues)</string>
+    <string>Searching for all files in &apos;/var/lib/jenkins/workspace/Assignment_04&apos; that match the pattern &apos;**/checkstyle-result.xml&apos;</string>
+    <string>Traversing of symbolic links: enabled</string>
+    <string>-&gt; found 1 file</string>
+    <string>Successfully parsed file /var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</string>
+    <string>-&gt; found 813 issues (skipped 0 duplicates)</string>
+    <string>Successfully processed file &apos;target/checkstyle-result.xml&apos;</string>
+    <string>Post processing issues on &apos;Master&apos; with source code encoding &apos;UTF-8&apos;</string>
+    <string>Creating SCM blamer to obtain author and commit information for affected files</string>
+    <string>-&gt; No blamer installed yet. You need to install the &apos;git-forensics&apos; plugin to enable blaming for Git.</string>
+    <string>Resolving file names for all issues in workspace &apos;/var/lib/jenkins/workspace/Assignment_04&apos;</string>
+    <string>-&gt; resolved paths in source directory (16 found, 0 not found)</string>
+    <string>Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)</string>
+    <string>-&gt; resolved module names for 813 issues</string>
+    <string>Resolving package names (or namespaces) by parsing the affected files</string>
+    <string>-&gt; resolved package names of 16 affected files</string>
+    <string>No filter has been set, publishing all 813 issues</string>
+    <string>Creating fingerprints for all affected code blocks to track issues over different builds</string>
+    <string>-&gt; created fingerprints for 813 issues (skipped 0 issues)</string>
+    <string>Searching for all files in &apos;/var/lib/jenkins/workspace/Assignment_04&apos; that match the pattern &apos;**/checkstyle-result.xml&apos;</string>
+    <string>Traversing of symbolic links: enabled</string>
+    <string>-&gt; found 1 file</string>
+    <string>Successfully parsed file /var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</string>
+    <string>-&gt; found 813 issues (skipped 0 duplicates)</string>
+    <string>Successfully processed file &apos;target/checkstyle-result.xml&apos;</string>
+    <string>Post processing issues on &apos;Master&apos; with source code encoding &apos;UTF-8&apos;</string>
+    <string>Creating SCM blamer to obtain author and commit information for affected files</string>
+    <string>-&gt; No blamer installed yet. You need to install the &apos;git-forensics&apos; plugin to enable blaming for Git.</string>
+    <string>Resolving file names for all issues in workspace &apos;/var/lib/jenkins/workspace/Assignment_04&apos;</string>
+    <string>-&gt; resolved paths in source directory (16 found, 0 not found)</string>
+    <string>Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)</string>
+    <string>-&gt; resolved module names for 813 issues</string>
+    <string>Resolving package names (or namespaces) by parsing the affected files</string>
+    <string>-&gt; resolved package names of 16 affected files</string>
+    <string>No filter has been set, publishing all 813 issues</string>
+    <string>Creating fingerprints for all affected code blocks to track issues over different builds</string>
+    <string>-&gt; created fingerprints for 813 issues (skipped 0 issues)</string>
+    <string>Searching for all files in &apos;/var/lib/jenkins/workspace/Assignment_04&apos; that match the pattern &apos;**/checkstyle-result.xml&apos;</string>
+    <string>Traversing of symbolic links: enabled</string>
+    <string>-&gt; found 1 file</string>
+    <string>Successfully parsed file /var/lib/jenkins/workspace/Assignment_04/target/checkstyle-result.xml</string>
+    <string>-&gt; found 813 issues (skipped 0 duplicates)</string>
+    <string>Successfully processed file &apos;target/checkstyle-result.xml&apos;</string>
+    <string>Post processing issues on &apos;Master&apos; with source code encoding &apos;UTF-8&apos;</string>
+    <string>Creating SCM blamer to obtain author and commit information for affected files</string>
+    <string>-&gt; No blamer installed yet. You need to install the &apos;git-forensics&apos; plugin to enable blaming for Git.</string>
+    <string>Resolving file names for all issues in workspace &apos;/var/lib/jenkins/workspace/Assignment_04&apos;</string>
+    <string>-&gt; resolved paths in source directory (16 found, 0 not found)</string>
+    <string>Resolving module names from module definitions (build.xml, pom.xml, or Manifest.mf files)</string>
+    <string>-&gt; resolved module names for 813 issues</string>
+    <string>Resolving package names (or namespaces) by parsing the affected files</string>
+    <string>-&gt; resolved package names of 16 affected files</string>
+    <string>No filter has been set, publishing all 813 issues</string>
+    <string>Creating fingerprints for all affected code blocks to track issues over different builds</string>
+    <string>-&gt; created fingerprints for 813 issues (skipped 0 issues)</string>
+    <string>Copying affected files to Jenkins&apos; build folder &apos;/var/lib/jenkins/jobs/Assignment_04/builds/43/files-with-issues&apos;</string>
+    <string>-&gt; 16 copied, 0 not in workspace, 0 not-found, 0 with I/O error</string>
+    <string>Repository miner is not configured, skipping repository mining</string>
+    <string>Reference build recorder is not configured</string>
+    <string>Obtaining reference build from same job (Assignment_04)</string>
+    <string>Using reference build &apos;Assignment_04 #41&apos; to compute new, fixed, and outstanding issues</string>
+  </infoMessages>
+  <errorMessages/>
+  <countersByKey/>
+  <duplicatesSize>0</duplicatesSize>
+</analysisReport>

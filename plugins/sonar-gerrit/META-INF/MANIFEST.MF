@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.1
+Build-Jdk-Spec: 11
+Extension-Name: sonar-gerrit
+Implementation-Title: sonar-gerrit
+Implementation-Version: 377.v8f3808963dc5
+Specification-Title: The Jenkins Plugins Parent POM Project
+Group-Id: org.jenkins-ci.plugins
+Short-Name: sonar-gerrit
+Long-Name: Sonar Gerrit Plugin
+Url: https://github.com/jenkinsci/sonar-gerrit-plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 377.v8f3808963dc5
+Hudson-Version: 2.277.4
+Jenkins-Version: 2.277.4
+Plugin-Dependencies: gerrit-trigger:2.35.0,credentials:2.6.1,sonar:2.13.
+ 1,structs:1.23
+Plugin-Developers: Tatiana Didik (Goretskaya):aquarellian:aquarellian@gm
+ ail.com,Aleksey Didik:adidik:,Réda Housni Alaoui:reda-alaoui:reda-alao
+ ui@hey.com
+Plugin-License-Name: MIT License
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmUrl: https://github.com/jenkinsci/sonar-gerrit-plugin
+

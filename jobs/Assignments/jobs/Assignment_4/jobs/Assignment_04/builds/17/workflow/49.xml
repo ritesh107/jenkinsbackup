@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3659.v582dc37621d8">
+    <parentIds>
+      <string>48</string>
+    </parentIds>
+    <id>49</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.support.steps.input.InputStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3659.v582dc37621d8">
+      <arguments>
+        <entry>
+          <string>submitter</string>
+          <string>ritesh</string>
+        </entry>
+        <entry>
+          <string>submitterParameter</string>
+          <null/>
+        </entry>
+        <entry>
+          <string>id</string>
+          <string>11c535fc1c8531fc3906dac37a5c366c</string>
+        </entry>
+        <entry>
+          <string>message</string>
+          <string>Do you want to fail the pipeline</string>
+        </entry>
+        <entry>
+          <string>ok</string>
+          <string>No</string>
+        </entry>
+        <entry>
+          <string>parameters</string>
+          <list/>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1213.v646def1087f9">
+      <startTime>1684847321883</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+    <s.a.PauseAction>
+      <cause>Input</cause>
+      <startTime>1684847321895</startTime>
+      <endTime>1684847328890</endTime>
+    </s.a.PauseAction>
+    <org.jenkinsci.plugins.workflow.support.steps.input.InputSubmittedAction plugin="pipeline-input-step@468.va_5db_051498a_4">
+      <parameters class="linked-hash-map"/>
+      <approver>ritesh</approver>
+    </org.jenkinsci.plugins.workflow.support.steps.input.InputSubmittedAction>
+  </actions>
+</Tag>

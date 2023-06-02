@@ -1,0 +1,6 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+ERROR: Unable to find Jenkinsfile from git https://github.com/ritesh107/multibranch.git
+[Checks API] No suitable checks publisher found.
+[withMaven] downstreamPipelineTriggerRunListener - Failure to introspect build steps: java.io.IOException: Demo-Sessions/jenkisfile #1 did not yet start
+[withMaven] downstreamPipelineTriggerRunListener - Failure to introspect build steps: java.io.IOException: Demo-Sessions/jenkisfile #1 did not yet start
+Finished: FAILURE

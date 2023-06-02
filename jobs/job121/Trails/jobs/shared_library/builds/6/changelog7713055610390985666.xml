@@ -1,0 +1,9 @@
+commit b70ffb5554aab578f1c3d846c394a82619f76e8f
+tree aa8b479b98a4020f0ae55d4f3e5a80f62f3033a4
+parent c00f724a7eacb1d882e8db893cc23c80cabbd9d4
+author ritesh107 <133903078+ritesh107@users.noreply.github.com> 2023-05-30 23:42:51 +0530
+committer GitHub <noreply@github.com> 2023-05-30 23:42:51 +0530
+
+    Rename echo.groovy to abc.groovy
+
+:100644 100644 1641b81c1310c554bbbe272bd2eee232a06dbfce 1641b81c1310c554bbbe272bd2eee232a06dbfce R100	vars/echo.groovy	vars/abc.groovy

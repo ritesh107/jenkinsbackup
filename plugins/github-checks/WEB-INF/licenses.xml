@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<l:dependencies xmlns:l='licenses' groupId='io.jenkins.plugins' artifactId='github-checks' version='536.v2e4ea_8fa_e423'><l:dependency name='GitHub Checks plugin' groupId='io.jenkins.plugins' artifactId='github-checks' version='536.v2e4ea_8fa_e423' url='https://github.com/jenkinsci/github-checks-plugin'><l:description>The Jenkins Plugins Parent POM Project</l:description><l:license name='MIT License' url='https://opensource.org/licenses/MIT'/></l:dependency></l:dependencies>

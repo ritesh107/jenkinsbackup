@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Gerrit Trigger
+Specification-Version: 2.39
+Implementation-Title: Gerrit Trigger
+Implementation-Version: 2.39.0
+Group-Id: com.sonyericsson.hudson.plugins.gerrit
+Short-Name: gerrit-trigger
+Long-Name: Gerrit Trigger
+Url: https://github.com/jenkinsci/gerrit-trigger-plugin/blob/master/docs
+ /README.adoc
+Plugin-Version: 2.39.0
+Hudson-Version: 2.346.3
+Jenkins-Version: 2.346.3
+Plugin-Dependencies: rebuild:1.34;resolution:=optional,caffeine-api:2.9.
+ 3-65.v6a_47d0f4d1fe,configuration-as-code:1512.vb_79d418d5fc8;resolutio
+ n:=optional,workflow-api:1192.v2d0deb_19d212;resolution:=optional,workf
+ low-step-api:639.v6eca_cd8c04a_a_;resolution:=optional,apache-httpcompo
+ nents-client-4-api:4.5.13-138.v4e7d9a_7b_a_e61,git-client:3.11.0;resolu
+ tion:=optional,git:4.11.4;resolution:=optional,jackson2-api:2.13.3-285.
+ vc03c0256d517,rabbitmq-consumer:2.8;resolution:=optional,scm-api:621.vd
+ a_a_b_055e58f7,support-core:1204.v7ee88742a_53f;resolution:=optional
+Plugin-Developers: Robert Sandell:rsandell:robert.sandell@cloudbees.com,
+ Tomas Westling:twestling:tomas.westling@sonymobile.com
+Plugin-License-Name: MIT License
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmUrl: https://github.com/jenkinsci/gerrit-trigger-plugin
+

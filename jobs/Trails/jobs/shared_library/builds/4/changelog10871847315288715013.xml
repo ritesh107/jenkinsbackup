@@ -1,0 +1,9 @@
+commit c00f724a7eacb1d882e8db893cc23c80cabbd9d4
+tree 57776e7c58f47fbdac78515fb2e29615f32abe9d
+parent 1fd6738c7aa52778232d9289ee143957eab776f0
+author ritesh107 <133903078+ritesh107@users.noreply.github.com> 2023-05-30 23:40:30 +0530
+committer GitHub <noreply@github.com> 2023-05-30 23:40:30 +0530
+
+    Update and rename jenkins.groovy to echo.groovy
+
+:100644 100644 708d02aadad02fdfa3b3be77ab50e42486784141 1641b81c1310c554bbbe272bd2eee232a06dbfce R053	vars/jenkins.groovy	vars/echo.groovy

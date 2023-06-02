@@ -1,0 +1,83 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+Loading library ritesh@master
+Attempting to resolve master from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git ls-remote -h -- https://github.com/ritesh107/shared_library.git # timeout=10
+Could not find master in remote references. Pulling heads to local for deep search...
+Creating git repository in /var/lib/jenkins/caches/git-ace47bfb3ad3648cde494bbc219b7150
+ > git init /var/lib/jenkins/caches/git-ace47bfb3ad3648cde494bbc219b7150 # timeout=10
+Setting origin to https://github.com/ritesh107/shared_library.git
+ > git config remote.origin.url https://github.com/ritesh107/shared_library.git # timeout=10
+Fetching origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git config --get remote.origin.url # timeout=10
+ > git fetch --tags --force --progress -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse master^{commit} # timeout=10
+ERROR: Could not resolve master
+hudson.plugins.git.GitException: Command "git rev-parse master^{commit}" returned status code 128:
+stdout: master^{commit}
+
+stderr: fatal: ambiguous argument 'master^{commit}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2732)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2658)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2654)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1979)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1991)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.revParse(CliGitAPIImpl.java:1087)
+	at hudson.plugins.git.GitAPI.revParse(GitAPI.java:337)
+	at jenkins.plugins.git.AbstractGitSCMSource$10.run(AbstractGitSCMSource.java:1012)
+	at jenkins.plugins.git.AbstractGitSCMSource$10.run(AbstractGitSCMSource.java:1006)
+	at jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:398)
+	at jenkins.plugins.git.AbstractGitSCMSource.doRetrieve(AbstractGitSCMSource.java:340)
+	at jenkins.plugins.git.AbstractGitSCMSource.retrieve(AbstractGitSCMSource.java:1006)
+	at jenkins.scm.api.SCMSource.fetch(SCMSource.java:635)
+	at org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever.lambda$retrieve$0(SCMSourceRetriever.java:75)
+	at org.jenkinsci.plugins.workflow.libs.SCMBasedRetriever.retrySCMOperation(SCMBasedRetriever.java:222)
+	at org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever.retrieve(SCMSourceRetriever.java:75)
+	at org.jenkinsci.plugins.workflow.libs.LibraryAdder.retrieve(LibraryAdder.java:260)
+	at org.jenkinsci.plugins.workflow.libs.LibraryAdder.add(LibraryAdder.java:150)
+	at org.jenkinsci.plugins.workflow.libs.LibraryDecorator$1.call(LibraryDecorator.java:125)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1087)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:568)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:518)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:336)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+ERROR: No version master found for library ritesh
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+WorkflowScript: Loading libraries failed
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1107)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:568)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:518)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:336)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+[withMaven] downstreamPipelineTriggerRunListener - Failure to introspect build steps: java.io.IOException: shared_library #1 did not yet start
+[withMaven] downstreamPipelineTriggerRunListener - Failure to introspect build steps: java.io.IOException: shared_library #1 did not yet start
+Finished: FAILURE

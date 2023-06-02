@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: H2 API Plugin
+Specification-Version: 0.0
+Implementation-Title: H2 API Plugin
+Implementation-Version: 11.1.4.199-12.v9f4244395f7a_
+Group-Id: io.jenkins.plugins
+Short-Name: h2-api
+Long-Name: H2 API Plugin
+Url: https://github.com/jenkinsci/h2-api-plugin
+Plugin-Version: 11.1.4.199-12.v9f4244395f7a_
+Hudson-Version: 2.387.1
+Jenkins-Version: 2.387.1
+Plugin-Developers: 
+Support-Dynamic-Loading: true
+Plugin-License-Name: MIT License
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmUrl: https://github.com/jenkinsci/h2-api-plugin
+

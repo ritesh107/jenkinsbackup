@@ -1,0 +1,14 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/Trails/testing-email
+No emails were triggered.
+[testing-email] $ /bin/sh -xe /tmp/jenkins17638975182223871130.sh
++ echo Hello From Ritesh
+Hello From Ritesh
+Email was triggered for: Always
+Email was triggered for: Success
+Sending email for trigger: Success
+An attempt to send an e-mail to empty list of recipients, ignored.
+Sending email for trigger: Always
+Sending email to: riteshkumar19325@gmail.com
+Finished: SUCCESS

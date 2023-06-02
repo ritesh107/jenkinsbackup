@@ -1,0 +1,120 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Assignment 2:&#xd;
+    Part 1:-&#xd;
+      Create a Jenkins job via which you will be able to perform below operations &amp; if any of the step fails a Slack and Email notification should be sent:&#xd;
+      - Create a branch&#xd;
+      - List all branches&#xd;
+      - Merge one branch with other branch&#xd;
+      - Rebase one branch with other branch&#xd;
+      - Delete a branch</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.7.13">
+      <gitLabConnection></gitLabConnection>
+      <jobCredentialId></jobCredentialId>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>action</name>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>create</string>
+              <string>list</string>
+              <string>merge</string>
+              <string>rebase</string>
+              <string>delete</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>branch01</name>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>branch02</name>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@2.13">
+      <categories class="java.util.concurrent.CopyOnWriteArrayList"/>
+      <throttleEnabled>false</throttleEnabled>
+      <throttleOption>project</throttleOption>
+      <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
+      <paramsToUseForLimit></paramsToUseForLimit>
+    </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@5.0.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/opstree/spring3hibernate.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <assignedNode>Ubuntu</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>case $action in
+    create)
+        if git checkout -b $branch01 2&gt;/dev/null; then
+            echo &quot;$branch01 Created&quot;
+        else
+            echo &quot;$branch01 already exists&quot;
+        fi
+        ;;
+    list)
+        git branch -a
+        echo &quot;List Of Available Branches in Repository&quot;
+        ;;
+    merge)
+        if git merge $branch01 $branch02 2&gt;/dev/null; then
+            echo &quot;Merging $branch01 with $branch02&quot;
+        fi
+        ;;
+    delete)
+        if git branch -D $branch01 2&gt;/dev/null; then
+            echo &quot;$branch01 deleted&quot;
+        else
+            echo &quot;$branch01 does not exist&quot;
+        fi
+        ;;
+    rebase)
+        if git rebase $branch01 $branch02 2&gt;/dev/null; then
+            echo &quot;Rebasing $branch01 onto $branch02&quot;
+        fi
+        ;;
+    *)
+        echo &quot;Invalid action&quot;
+        ;;
+esac</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.Mailer plugin="mailer@448.v5b_97805e3767">
+      <recipients>riteshkumar19325@gmail.com</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers/>
+</project>

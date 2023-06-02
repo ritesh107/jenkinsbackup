@@ -1,0 +1,78 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+[8mha:////4EqIFo33+ygWeqyLAjeH6aRO9sIVBmCCiy7XpGheDl+uAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4Bhs329OlVlRpwXvXnfshWvvkamgP35m/K7a2gTHD3fiAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4Bumgr/3+X8LC3vDHdcZbRRfhjVsKmqb+q9Plb+uCDVoAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/lib/jenkins/workspace/Trails/pipeline04_scripted
+[8mha:////4GwQu244lF+aWw0E1hM0WxLbXZvLwPy52mVp8k/2BC1tAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4M6OrO/EK9vy2YsD54xpvvw6fwYuwwwYThy3NbqF5wWtAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4P9k1nrH0Z9KTr2Bh/YVjeNitJv4+QnAOYoxzutIBiv4AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Checkout)
+[8mha:////4NeMq7VfCKvSAZH2VWrQgXhb+b0ESduJs4VA4lWfXTdlAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] git
+The recommended git tool is: NONE
+Warning: CredentialId "your-credentials-id" could not be found.
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Trails/pipeline04_scripted/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/opstree/spring3hibernate.git # timeout=10
+Fetching upstream changes from https://github.com/opstree/spring3hibernate.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/opstree/spring3hibernate.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/bp_packer
+Seen branch in repository origin/bpmaven
+Seen branch in repository origin/canary
+Seen branch in repository origin/compose-setup
+Seen branch in repository origin/dependabot/maven/commons-beanutils-commons-beanutils-1.9.4
+Seen branch in repository origin/dependabot/maven/commons-collections-commons-collections-3.2.2
+Seen branch in repository origin/dependabot/maven/commons-fileupload-commons-fileupload-1.5
+Seen branch in repository origin/dependabot/maven/commons-io-commons-io-2.7
+Seen branch in repository origin/dependabot/maven/junit-junit-4.13.1
+Seen branch in repository origin/dependabot/maven/mysql-mysql-connector-java-8.0.28
+Seen branch in repository origin/dependabot/maven/org.apache.commons-commons-email-1.5
+Seen branch in repository origin/dependabot/maven/org.apache.lucene-lucene-core-7.1.0
+Seen branch in repository origin/dependabot/maven/org.hibernate-hibernate-validator-5.3.5.Final
+Seen branch in repository origin/dependabot/maven/org.springframework-spring-beans-5.2.20.RELEASE
+Seen branch in repository origin/dependabot/maven/org.springframework-spring-core-5.2.22.RELEASE
+Seen branch in repository origin/dependabot/maven/org.springframework-spring-expression-5.2.21.RELEASE
+Seen branch in repository origin/dependabot/maven/org.springframework-spring-webmvc-5.2.20.RELEASE
+Seen branch in repository origin/dependabot/maven/xalan-xalan-2.7.2
+Seen branch in repository origin/dependabot/maven/xerces-xercesImpl-2.12.2
+Seen branch in repository origin/dev
+Seen branch in repository origin/gradle
+Seen branch in repository origin/kubernetes_setup
+Seen branch in repository origin/master
+Seen branch in repository origin/ms
+Seen branch in repository origin/msk-tf-files
+Seen branch in repository origin/ninja
+Seen branch in repository origin/sonar-branch-test
+Seen branch in repository origin/surabhi
+Seen branch in repository origin/tf-var-override
+Seen 29 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 7dd69492f68fc5584569cc5decea97aa84e62ada (origin/ninja)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7dd69492f68fc5584569cc5decea97aa84e62ada # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b */master 7dd69492f68fc5584569cc5decea97aa84e62ada # timeout=10
+[8mha:////4P+uiw6/7DUBs6KR0V88AD1Xb04Ln6aDUnA0IB9Qrl0UAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4AapgAO40aUFaaq9rOFqJKfG5TOAjs5yiFalxyGiMpn8AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4J+HknuwNrnFNIGpyytKGPeOhXxSXBagyA86vf1j5m0lAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIBiQ5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Q77aCbP8BhStF0r0AAAA=[0m[Pipeline] }
+[8mha:////4NjZOnYPppBJZMmtro9mmD05ceyKLO7xWQD7u6LLMZdmAAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KEOBon14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfkZSnI9h+Wl0FxvQAAAA==[0m[Pipeline] // node
+[8mha:////4Dy3YWLtW76OFJ5PCDVf2/2U+/JmKaxErrn8hUSBVTdiAAAAoh+LCAAAAAAAAP9tjTESgjAQRT84FraWHiKMtI6VbYbGE0SIMZDZxWQRKk/k1byDjMxY+av/XvNeb6xTxJGjU62lzlOqverD4OanRo7dNfCoWr6omilxsKqyY8WNPS1YsVgsy3KsNDaW6sDJkxNsdWsepgiGXHGWOLuDRu6bO57I9FwWE+ULU8TuNjSJ6df5G8DU94J8Xwqy8gPQ3eZBvQAAAA==[0m[Pipeline] End of Pipeline
+hudson.plugins.git.GitException: Command "git checkout -b */master 7dd69492f68fc5584569cc5decea97aa84e62ada" returned status code 128:
+stdout: 
+stderr: fatal: '*/master' is not a valid branch name.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2732)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$9.execute(CliGitAPIImpl.java:3054)
+Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 1053d7a3-4cc3-4d06-a5d3-54b61d97f8d3
+Caused: hudson.plugins.git.GitException: Could not checkout */master with start point 7dd69492f68fc5584569cc5decea97aa84e62ada
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$9.execute(CliGitAPIImpl.java:3076)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1359)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:129)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:97)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:84)
+	at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Finished: FAILURE

@@ -1,0 +1,80 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3659.v582dc37621d8">
+    <parentIds>
+      <string>6</string>
+    </parentIds>
+    <id>7</id>
+    <descriptorId>jenkins.plugins.git.GitStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3659.v582dc37621d8">
+      <arguments>
+        <entry>
+          <string>credentialsId</string>
+          <string>your-credentials-id</string>
+        </entry>
+        <entry>
+          <string>branch</string>
+          <string>*/master</string>
+        </entry>
+        <entry>
+          <string>url</string>
+          <string>https://github.com/opstree/spring3hibernate.git</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1213.v646def1087f9">
+      <startTime>1685474722652</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+    <wf.a.ErrorAction plugin="workflow-api@1213.v646def1087f9">
+      <error class="hudson.plugins.git.GitException" plugin="git-client@4.2.0">
+        <detailMessage>Could not checkout */master with start point 7dd69492f68fc5584569cc5decea97aa84e62ada</detailMessage>
+        <cause class="hudson.plugins.git.GitException">
+          <detailMessage>Command &quot;git checkout -b */master 7dd69492f68fc5584569cc5decea97aa84e62ada&quot; returned status code 128:
+stdout: 
+stderr: fatal: &apos;*/master&apos; is not a valid branch name.
+</detailMessage>
+          <stackTrace>
+            <trace>org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2732)</trace>
+            <trace>org.jenkinsci.plugins.gitclient.CliGitAPIImpl$9.execute(CliGitAPIImpl.java:3054)</trace>
+            <trace>hudson.plugins.git.GitSCM.checkout(GitSCM.java:1359)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:129)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:97)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:84)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+            <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+            <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+            <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+            <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+            <trace>java.base/java.lang.Thread.run(Thread.java:829)</trace>
+          </stackTrace>
+          <suppressedExceptions class="empty-list"/>
+        </cause>
+        <stackTrace>
+          <trace>org.jenkinsci.plugins.gitclient.CliGitAPIImpl$9.execute(CliGitAPIImpl.java:3076)</trace>
+          <trace>hudson.plugins.git.GitSCM.checkout(GitSCM.java:1359)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:129)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:97)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:84)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+          <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+          <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+          <trace>java.base/java.lang.Thread.run(Thread.java:829)</trace>
+        </stackTrace>
+        <suppressedExceptions>
+          <wf.a.ErrorAction_-ErrorId plugin="workflow-api@1213.v646def1087f9">
+            <stackTrace/>
+            <suppressedExceptions class="empty-list"/>
+            <uuid>1053d7a3-4cc3-4d06-a5d3-54b61d97f8d3</uuid>
+          </wf.a.ErrorAction_-ErrorId>
+        </suppressedExceptions>
+      </error>
+    </wf.a.ErrorAction>
+  </actions>
+</Tag>

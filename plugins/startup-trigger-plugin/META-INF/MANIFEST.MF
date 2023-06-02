@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: ejpenney
+Build-Jdk: 1.8.0_161
+Extension-Name: startup-trigger-plugin
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: startup-trigger-plugin
+Implementation-Version: 2.9.3
+Group-Id: org.jenkins-ci.plugins
+Short-Name: startup-trigger-plugin
+Long-Name: Startup Trigger
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Startup+Trigger
+Plugin-Version: 2.9.3
+Hudson-Version: 1.642.3
+Jenkins-Version: 1.642.3
+Plugin-Dependencies: nodelabelparameter:1.5.1;resolution:=optional,wor
+ kflow-job:2.7;resolution:=optional
+Plugin-Developers: Emory Penney:ejpenney:treadstoneit@gmail.com
+

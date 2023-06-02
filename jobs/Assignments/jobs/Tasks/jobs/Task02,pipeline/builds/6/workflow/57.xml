@@ -1,0 +1,42 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3659.v582dc37621d8">
+    <parentIds>
+      <string>56</string>
+    </parentIds>
+    <id>57</id>
+    <descriptorId>jenkins.plugins.slack.workflow.SlackSendStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3659.v582dc37621d8">
+      <arguments>
+        <entry>
+          <string>channel</string>
+          <string>jenkins_report</string>
+        </entry>
+        <entry>
+          <string>teamDomain</string>
+          <string>opstree</string>
+        </entry>
+        <entry>
+          <string>tokenCredentialId</string>
+          <string>slack-token</string>
+        </entry>
+        <entry>
+          <string>message</string>
+          <string>Pipeline-02 Executed Succesfully</string>
+        </entry>
+        <entry>
+          <string>username</string>
+          <string>Ritesh Kumar</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1213.v646def1087f9">
+      <startTime>1684778678921</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>

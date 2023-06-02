@@ -1,0 +1,51 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+[Fri May 26 04:05:02 UTC 2023] Starting branch indexing...
+[8mha:////4JI8PfcwwzJ0AUsQosz3tlQwsulFGyZzQuNAl9rMHhhVAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRHmLUNCwA1P3sSjgAAAA==[0mConnecting to https://api.github.com with no credentials, anonymous access
+Examining [8mha:////4P5VChi1n+OWLQyMHKKjd6ReAITgFk2CWi1UhtjPZ1mIAAAAqB+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMgQLWHQyCgpKSi20tdPzyzJKE0C6srVL8osSS3OMDQw188tzSnJTCpKzEvOAAASR+uIrQAAAA==[0mritesh107/multibranch
+
+  Checking branches...
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4CfB9pbgYyihOabvJ2zfZAqnNa7As2T1rYLejAml4MHfAAAAsR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoYYJAQSKBUNSBENEzjhFBsc2zqfUViDNaBhCMZhB4LS8Zr/mv+eHxgFgqmKp+BsVjkbnMFsd/NIRtvLwTEu88crv/t3AskeUoO2ZlXAMJJhGBdneZXCSFuLI5O29aYlmPzltv3+YtAzSABa30nKsFDMPqyFqDWrWHavRpBmDGo+W4kmGtYlSVspwYQoGhkY6QtLp81PuQAAAA==[0mmaster
+
+  Getting remote pull requests...
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: master (still at fe4c10882bfda6a2a12ba4247d2d80b66d694fc5)
+
+    Checking branch [8mha:////4Dwe0c8Ib3DJnc/0x+YnR8gfMIFUASU98LMdtCpZyTu8AAAAsR+LCAAAAAAAAP9djLENwjAQRY8goKdEzBBDAUigVDQgRTRM4ITDNjiOdT6jsAZrQMMQjMMOBNHxmv+a/x5v6AWCsY6HULu0rF2oLaabq0eyxp13NeM8uz+zm38lkGyhb9Ep1jl0I1mGYX6SFymsdErsmYxTq4Zg9Jdb//Ybgx+dBKDxrQwYZprZh6UQyrCORfuqBBnGoKeThaiiZVOQdKUWTIjiiJIj4QdJJQSIugAAAA==[0mfeature
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: feature (still at d6315b181cc8aaaf3b26848bb811f2296b04307c)
+
+    Checking branch [8mha:////4MNFvjkIarTR4YEFAdsSMAek5E7jrGxPp6aFm/gamrb4AAAAsR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoYcSAgkUCoakCIaJnCCsQ2OHZ3PKKzBGtAwBOOwA0F0vOa/5r/HGwaBYKzjIXiXVd4Fb2W2uTaSrHHnnWc5z+/P/Na8Eki2kFrpFOsC+pEsw7A4iYtAK5zCPZNxatUSjP5y699+Y/CjlwC0TScpw0wzN2GJqAzrWHavGsmwDHo6WWAdLZuShKs0MkmJRx+J9QftEGcVuQAAAA==[0mfourth
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: fourth (still at 8ac195c586b7d8eddb91757669b38561c1553cd9)
+
+    Checking branch [8mha:////4Oh+nlkQulWDUQhuzNOCQu2/i9uC7m2Nk7woD4yWcuz8AAAAsR+LCAAAAAAAAP9djLENwjAQRY+gMAAlYoYcCAkkUCoakCIaJnCCFTs4Z8s+o7AGa0DDEIzDDgTR8Zr/mv8eb0iDh6mKp2ApqywFa2S2uzrpjabzwbJc5vdnfnOvBJI9jIykmlUBw+gNw7hoxEWgEVTjkb2metN5mPzltr/9xuDHIAHoXC8pw0Ixu7BGrDWrWPavFr1mGdR8tsI2GtalF1QpZC8lkqZGfAB/1+r4uAAAAA==[0mninja
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: ninja (still at fe4c10882bfda6a2a12ba4247d2d80b66d694fc5)
+
+    Checking branch [8mha:////4GcyUplehZscxwjzkOATgby+4PCgNzqfvUXZL8OBi/WtAAAArx+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMhgK2EwySgpKSi20tdPzyzJKE0C6srVL8osSS3OMDQw188tzSnJTCpKzEvO0C8pSk2FSgEAl+H07LkAAAA=[0mritesh
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: ritesh (still at fe4c10882bfda6a2a12ba4247d2d80b66d694fc5)
+
+    Checking branch [8mha:////4KjXGrvWCSZP3HDz/O7/vYrvkTVVLEdKPycLGGiWy6hiAAAAsB+LCAAAAAAAAP9djLENwjAQRY+gMAAlYoYcCAkkUCoakCIaJnCCFRsc2zqfUViDNaBhCMZhB4LS8Zr/mv+eH0gDwVTFU3A2q5wNzshsd/OSjLaXg2O5zB+v/O7fCSR7GBlpa1YFDCMZhnFxFleBRtgaj0za1puWYPKX2/b7i0HPIAFofScpw0Ix+7BGrDWrWHavBkmzDGo+W2ETDeuShK0UMkmJrDSdvmpFOJ24AAAA[0mthird
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: third (still at 8ac195c586b7d8eddb91757669b38561c1553cd9)
+
+  6 branches were processed
+
+  Checking pull-requests...
+
+  0 pull requests were processed
+
+Finished examining ritesh107/multibranch
+
+[Fri May 26 04:05:02 UTC 2023] Finished branch indexing. Indexing took 0.2 sec
+Finished: SUCCESS

@@ -1,0 +1,9 @@
+commit 07e5cc22748fc2ff63c68a268e995acb95343687
+tree 5c6ae49a17a59c5c27723a16cb3086969f5d2d8b
+parent 89e58111535aec13e4ebea82425eff8bc7780654
+author ritesh107 <133903078+ritesh107@users.noreply.github.com> 2023-06-01 21:43:54 +0530
+committer GitHub <noreply@github.com> 2023-06-01 21:43:54 +0530
+
+    Update inventory
+
+:100644 100644 a8c09bb88a37167f052b3b2b2b0a92ee44a86944 8bd7a50df2db668c1afb39a5c07bf2b58e7bed4b M	jenkins/tests/inventory

@@ -1,0 +1,114 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3659.v582dc37621d8">
+    <parentIds>
+      <string>10</string>
+    </parentIds>
+    <id>11</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.ToolStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3659.v582dc37621d8">
+      <arguments>
+        <entry>
+          <string>name</string>
+          <string>ansible</string>
+        </entry>
+        <entry>
+          <string>type</string>
+          <string>org.jenkinsci.plugins.ansible.AnsibleInstallation</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1213.v646def1087f9">
+      <startTime>1685639721664</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+    <wf.a.ErrorAction plugin="workflow-api@1213.v646def1087f9">
+      <error class="java.io.IOException">
+        <detailMessage>Failed to create a temp file on /usr/bin</detailMessage>
+        <cause class="java.io.IOException">
+          <detailMessage>Failed to create a temporary directory in /usr/bin</detailMessage>
+          <cause class="java.io.IOException">
+            <detailMessage>Permission denied</detailMessage>
+            <stackTrace>
+              <trace>java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)</trace>
+              <trace>java.base/java.io.File.createTempFile(File.java:2129)</trace>
+              <trace>hudson.FilePath$CreateTextTempFile.invoke(FilePath.java:1651)</trace>
+              <trace>hudson.FilePath$CreateTextTempFile.invoke(FilePath.java:1628)</trace>
+              <trace>hudson.FilePath.act(FilePath.java:1198)</trace>
+              <trace>hudson.FilePath.act(FilePath.java:1181)</trace>
+              <trace>hudson.FilePath.createTextTempFile(FilePath.java:1622)</trace>
+              <trace>hudson.FilePath.createTextTempFile(FilePath.java:1595)</trace>
+              <trace>hudson.tools.AbstractCommandInstaller.performInstallation(AbstractCommandInstaller.java:76)</trace>
+              <trace>hudson.tools.InstallerTranslator.getToolHome(InstallerTranslator.java:70)</trace>
+              <trace>hudson.tools.ToolLocationNodeProperty.getToolHome(ToolLocationNodeProperty.java:109)</trace>
+              <trace>hudson.tools.ToolInstallation.translateFor(ToolInstallation.java:221)</trace>
+              <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:55)</trace>
+              <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:42)</trace>
+              <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:157)</trace>
+              <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:138)</trace>
+              <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+              <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+              <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+              <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+              <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+              <trace>java.base/java.lang.Thread.run(Thread.java:829)</trace>
+            </stackTrace>
+            <suppressedExceptions class="empty-list"/>
+          </cause>
+          <stackTrace>
+            <trace>hudson.FilePath$CreateTextTempFile.invoke(FilePath.java:1653)</trace>
+            <trace>hudson.FilePath$CreateTextTempFile.invoke(FilePath.java:1628)</trace>
+            <trace>hudson.FilePath.act(FilePath.java:1198)</trace>
+            <trace>hudson.FilePath.act(FilePath.java:1181)</trace>
+            <trace>hudson.FilePath.createTextTempFile(FilePath.java:1622)</trace>
+            <trace>hudson.FilePath.createTextTempFile(FilePath.java:1595)</trace>
+            <trace>hudson.tools.AbstractCommandInstaller.performInstallation(AbstractCommandInstaller.java:76)</trace>
+            <trace>hudson.tools.InstallerTranslator.getToolHome(InstallerTranslator.java:70)</trace>
+            <trace>hudson.tools.ToolLocationNodeProperty.getToolHome(ToolLocationNodeProperty.java:109)</trace>
+            <trace>hudson.tools.ToolInstallation.translateFor(ToolInstallation.java:221)</trace>
+            <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:55)</trace>
+            <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:42)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:157)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:138)</trace>
+            <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+            <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+            <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+            <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+            <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+            <trace>java.base/java.lang.Thread.run(Thread.java:829)</trace>
+          </stackTrace>
+          <suppressedExceptions class="empty-list"/>
+        </cause>
+        <stackTrace>
+          <trace>hudson.FilePath.createTextTempFile(FilePath.java:1624)</trace>
+          <trace>hudson.FilePath.createTextTempFile(FilePath.java:1595)</trace>
+          <trace>hudson.tools.AbstractCommandInstaller.performInstallation(AbstractCommandInstaller.java:76)</trace>
+          <trace>hudson.tools.InstallerTranslator.getToolHome(InstallerTranslator.java:70)</trace>
+          <trace>hudson.tools.ToolLocationNodeProperty.getToolHome(ToolLocationNodeProperty.java:109)</trace>
+          <trace>hudson.tools.ToolInstallation.translateFor(ToolInstallation.java:221)</trace>
+          <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:55)</trace>
+          <trace>org.jenkinsci.plugins.ansible.AnsibleInstallation.forNode(AnsibleInstallation.java:42)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:157)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.ToolStep$Execution.run(ToolStep.java:138)</trace>
+          <trace>org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)</trace>
+          <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)</trace>
+          <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)</trace>
+          <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)</trace>
+          <trace>java.base/java.lang.Thread.run(Thread.java:829)</trace>
+        </stackTrace>
+        <suppressedExceptions>
+          <wf.a.ErrorAction_-ErrorId>
+            <stackTrace/>
+            <suppressedExceptions class="empty-list"/>
+            <uuid>331ef37c-6370-47a8-bb0d-7a74aecb5466</uuid>
+          </wf.a.ErrorAction_-ErrorId>
+        </suppressedExceptions>
+      </error>
+    </wf.a.ErrorAction>
+  </actions>
+</Tag>

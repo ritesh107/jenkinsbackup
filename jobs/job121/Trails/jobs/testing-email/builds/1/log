@@ -1,0 +1,9 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/testing-email
+[testing-email] $ /bin/sh -xe /tmp/jenkins10605972182399463381.sh
++ ec%o Hello From Ritesh
+/tmp/jenkins10605972182399463381.sh: 2: ec%o: not found
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: riteshkumar19325@gmail.com
+Finished: FAILURE

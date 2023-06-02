@@ -1,0 +1,18 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>Ubuntu</name>
+  <description>Using execution of command on the controlller</description>
+  <remoteFS>/home/ubuntu/jenkins</remoteFS>
+  <numExecutors>5</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.SimpleScheduledRetentionStrategy">
+    <startTimeSpec>H 9-18 * * *</startTimeSpec>
+    <upTimeMins>540</upTimeMins>
+    <keepUpWhenActive>true</keepUpWhenActive>
+  </retentionStrategy>
+  <launcher class="hudson.slaves.CommandLauncher" plugin="command-launcher@100.v2f6722292ee8">
+    <agentCommand>ssh ubuntu@3.111.58.123 java -jar /home/ubuntu/jenkins/agent.jar</agentCommand>
+  </launcher>
+  <label>ubuntu</label>
+  <nodeProperties/>
+</slave>

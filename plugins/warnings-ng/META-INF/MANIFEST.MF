@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 17
+Specification-Title: Warnings Next Generation Plugin
+Specification-Version: 10.2
+Implementation-Title: Warnings Next Generation Plugin
+Implementation-Version: 10.2.0
+Group-Id: io.jenkins.plugins
+Artifact-Id: warnings-ng
+Short-Name: warnings-ng
+Long-Name: Warnings Next Generation Plugin
+Url: https://github.com/jenkinsci/warnings-ng-plugin
+Plugin-Version: 10.2.0
+Hudson-Version: 2.387.1
+Jenkins-Version: 2.387.1
+Plugin-Dependencies: analysis-model-api:11.2.0,bootstrap5-api:5.2.2-3,ch
+ ecks-api:2.0.0,commons-lang3-api:3.12.0-36.vd97de6465d5b_,commons-text-
+ api:1.10.0-36.vc008c8fcda_7b_,data-tables-api:1.13.3-3,echarts-api:5.4.
+ 0-4,font-awesome-api:6.3.0-2,forensics-api:2.1.0,jquery3-api:3.6.4-1,pl
+ ugin-util-api:3.2.1,prism-api:1.29.0-5,pull-request-monitoring:1.7.8;re
+ solution:=optional,workflow-api:1213.v646def1087f9,workflow-cps:3659.v5
+ 82dc37621d8,workflow-job:1292.v27d8cc3e2602,workflow-step-api:639.v6eca
+ _cd8c04a_a_,antisamy-markup-formatter:159.v25b_c67cd35fb_,apache-httpco
+ mponents-client-4-api:4.5.14-150.v7a_b_9d17134a_5,credentials:1254.vb_9
+ 6f366e7b_a_d,dashboard-view:2.487.vcf0ff9008a_c0;resolution:=optional,j
+ ackson2-api:2.15.0-334.v317a_165f9b_7c,matrix-project:789.v57a_725b_63c
+ 79;resolution:=optional,structs:324.va_f5d6774f3a_d,token-macro:359.vb_
+ cde11682e0c;resolution:=optional
+Plugin-Developers: Ullrich Hafner:uhafner:ullrich.hafner@gmail.com
+Plugin-License-Name: MIT license
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/warnings-ng-p
+ lugin.git
+Plugin-ScmTag: v10.2.0
+Plugin-ScmUrl: https://github.com/jenkinsci/warnings-ng-plugin
+Plugin-GitHash: 22e44064e752da3f1b345d388751a6febdcc1a95
+Implementation-Build: 22e44064e752da3f1b345d388751a6febdcc1a95
+

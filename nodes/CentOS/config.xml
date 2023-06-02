@@ -1,0 +1,25 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>CentOS</name>
+  <description>For CentOS</description>
+  <remoteFS>/home/centos/jenkins</remoteFS>
+  <numExecutors>3</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.SimpleScheduledRetentionStrategy">
+    <startTimeSpec>H 9-18 * * *</startTimeSpec>
+    <upTimeMins>540</upTimeMins>
+    <keepUpWhenActive>true</keepUpWhenActive>
+  </retentionStrategy>
+  <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@2.877.v365f5eb_a_b_eec">
+    <host>13.232.253.96</host>
+    <port>22</port>
+    <credentialsId>65124221-b746-4fae-b998-606fd348ec87</credentialsId>
+    <launchTimeoutSeconds>60</launchTimeoutSeconds>
+    <maxNumRetries>10</maxNumRetries>
+    <retryWaitTime>15</retryWaitTime>
+    <sshHostKeyVerificationStrategy class="hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy"/>
+    <tcpNoDelay>true</tcpNoDelay>
+  </launcher>
+  <label>CentOS</label>
+  <nodeProperties/>
+</slave>

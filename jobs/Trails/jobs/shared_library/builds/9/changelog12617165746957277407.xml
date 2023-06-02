@@ -1,0 +1,9 @@
+commit 764ffa8bd88212abc4d5861f1575a97f0cea5396
+tree 3cec924dff9a71a36638d7c7dd7521833eff6a93
+parent 9eca996c133d16df65767d36ad26870fa9630821
+author ritesh107 <133903078+ritesh107@users.noreply.github.com> 2023-05-30 23:46:08 +0530
+committer GitHub <noreply@github.com> 2023-05-30 23:46:08 +0530
+
+    Update abc.groovy
+
+:100644 100644 708d02aadad02fdfa3b3be77ab50e42486784141 08ba697322fa1824d5e291a69c8fd3f25afc90fd M	vars/abc.groovy

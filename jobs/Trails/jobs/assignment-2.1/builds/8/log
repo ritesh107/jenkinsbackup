@@ -1,0 +1,57 @@
+Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/Trails/assignment-2.1
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Trails/assignment-2.1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/opstree/spring3hibernate.git # timeout=10
+Fetching upstream changes from https://github.com/opstree/spring3hibernate.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/opstree/spring3hibernate.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 82d59771f414e2ea2583b200e688d2878c98cb29 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 82d59771f414e2ea2583b200e688d2878c98cb29 # timeout=10
+Commit message: "Updated path to correct value"
+ > git rev-list --no-walk 82d59771f414e2ea2583b200e688d2878c98cb29 # timeout=10
+[Checks API] No suitable checks publisher found.
+[assignment-2.1] $ /bin/sh -xe /tmp/jenkins3763185642599156063.sh
++ git branch -a
+* (HEAD detached at 82d5977)
+  ninja1
+  ninja2
+  remotes/origin/bp_packer
+  remotes/origin/bpmaven
+  remotes/origin/canary
+  remotes/origin/compose-setup
+  remotes/origin/dependabot/maven/commons-beanutils-commons-beanutils-1.9.4
+  remotes/origin/dependabot/maven/commons-collections-commons-collections-3.2.2
+  remotes/origin/dependabot/maven/commons-fileupload-commons-fileupload-1.5
+  remotes/origin/dependabot/maven/commons-io-commons-io-2.7
+  remotes/origin/dependabot/maven/junit-junit-4.13.1
+  remotes/origin/dependabot/maven/mysql-mysql-connector-java-8.0.28
+  remotes/origin/dependabot/maven/org.apache.commons-commons-email-1.5
+  remotes/origin/dependabot/maven/org.apache.lucene-lucene-core-7.1.0
+  remotes/origin/dependabot/maven/org.hibernate-hibernate-validator-5.3.5.Final
+  remotes/origin/dependabot/maven/org.springframework-spring-beans-5.2.20.RELEASE
+  remotes/origin/dependabot/maven/org.springframework-spring-core-5.2.22.RELEASE
+  remotes/origin/dependabot/maven/org.springframework-spring-expression-5.2.21.RELEASE
+  remotes/origin/dependabot/maven/org.springframework-spring-webmvc-5.2.20.RELEASE
+  remotes/origin/dependabot/maven/xalan-xalan-2.7.2
+  remotes/origin/dependabot/maven/xerces-xercesImpl-2.12.2
+  remotes/origin/dev
+  remotes/origin/gradle
+  remotes/origin/kubernetes_setup
+  remotes/origin/master
+  remotes/origin/ms
+  remotes/origin/msk-tf-files
+  remotes/origin/ninja
+  remotes/origin/sonar-branch-test
+  remotes/origin/surabhi
+  remotes/origin/tf-var-override
++ echo List Of Available Branches in Repository
+List Of Available Branches in Repository
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS

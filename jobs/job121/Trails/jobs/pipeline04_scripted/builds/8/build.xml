@@ -1,0 +1,206 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1295.v395eb_7400005">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>ritesh</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@656.va_a_ceeb_6ffb_f7">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@5.0.2">
+      <buildsByBranchName>
+        <entry>
+          <string>origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.2.0">
+              <sha1>82d59771f414e2ea2583b200e688d2878c98cb29</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>8</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/ninja</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.2.0">
+              <sha1>7dd69492f68fc5584569cc5decea97aa84e62ada</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/ninja</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@4.2.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>4</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/opstree/spring3hibernate.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@408.v7d5b_135a_b_d49">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/opstree/spring3hibernate.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+  </actions>
+  <queueId>720</queueId>
+  <timestamp>1685479466634</timestamp>
+  <startTime>1685479466637</startTime>
+  <result>FAILURE</result>
+  <duration>59884</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>node {
+    stage(&apos;Checkout&apos;) {
+        checkout([
+            $class: &apos;GitSCM&apos;,
+            branches: [[name: &apos;*/master&apos;], [name: &apos;*/ninja&apos;]],
+            userRemoteConfigs: [[url: &apos;https://github.com/opstree/spring3hibernate.git&apos;]]
+        ])
+    }
+
+    stage(&apos;Build&apos;) {
+        sh &apos;mvn clean package&apos;
+        // Add commands to build application
+    }
+
+    stage(&apos;Test&apos;) {
+        if (params.skip_test == &apos;Do_not&apos;) {
+            stage(&apos;Code Stability Tests&apos;) {
+                sh &apos;echo &quot;Running unit tests&quot;&apos;
+                sh &apos;mvn surefire:test&apos;
+                // Add commands to run unit tests
+            }
+
+            stage(&apos;Code Quality Analysis Tests&apos;) {
+                sh &apos;echo &quot;Running unit tests&quot;&apos;
+                sh &apos;mvn checkstyle:checkstyle&apos;
+                recordIssues tools: [checkStyle(pattern: &apos;**/checkstyle-result.xml&apos;)]
+                // Add commands to run unit tests
+            }
+
+            stage(&apos;Code Coverage Tests&apos;) {
+                sh &apos;echo &quot;Running integration tests&quot;&apos;
+                sh &apos;mvn cobertura:cobertura&apos;
+                recordIssues tools: [findBugs(pattern: &apos;**/findbugsXml.xml&apos;, useRankAsPriority: true)]
+                // Add commands to run integration tests
+            }
+        }
+    }
+
+    stage(&apos;Report Generation&apos;) {
+        echo &apos;Generating Report&apos;
+        sh &apos;mvn checkstyle:checkstyle &gt;&gt; /var/lib/jenkins/report_checkstyle.html&apos;
+        sh &apos;mvn cobertura:cobertura &gt;&gt; /var/lib/jenkins/report_cobertura.html&apos;
+    }
+
+    stage(&apos;Artifact archieve&apos;) {
+        archiveArtifacts &apos;target/*.jar, target/*.war&apos;
+    }
+
+    stage(&apos;Deploy&apos;) {
+        sh &apos;echo &quot;Deploying the application&quot;&apos;
+        // Add commands to deploy application
+    }
+}
+
+post {
+    success {
+        echo &quot;${env.JOB_NAME}&quot;
+        slackSend(channel: &apos;jenkins_report&apos;, color: &apos;#439FE0&apos;, message: &quot;JOB_NAME: ${env.JOB_NAME} BUILD_ID: ${env.BUILD_ID} WORKSPACE: ${env.WORKSPACE} Successful&quot;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;)
+        emailext(body: &apos;Build Success&apos;, recipientProviders: [developers()], replyTo: &apos;riteshkuma19325@gmail.com&apos;, subject: &apos;Pipeline 04&apos;, to: &apos;riteshkumar19325@gmail.com&apos;)
+        //emailext(attachLog: true, body: &apos;&apos;, recipientProviders: [developers(), buildUser()], subject: &apos;Successfull COmpletion of JOb&apos;, to: &apos;riteshkumar19325@gmail.com&apos;)
+        //emailext(body: &apos;A Test EMail&apos;, recipientProviders: [[$class: &apos;DevelopersRecipientProvider&apos;], [$class: &apos;RequesterRecipientProvider&apos;]], subject: &apos;Test&apos;)  
+    }
+    failure {
+        echo &quot;${env.JOB_NAME}&quot;
+        slackSend(channel: &apos;jenkins_report&apos;, color: &apos;#439FE0&apos;, message: &quot;JOB_NAME: ${env.JOB_NAME} BUILD_ID: ${env.BUILD_ID} WORKSPACE: ${env.WORKSPACE} Un-Successful&quot;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;)
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>256040884</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>75829162</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1073742936</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>90864621</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>399979230</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>38</iota>
+    <head>1:38</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@5.0.2">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/opstree/spring3hibernate.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/ninja</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node></node>
+      <workspace>/var/lib/jenkins/workspace/Trails/pipeline04_scripted@2</workspace>
+      <changelogFile>/var/lib/jenkins/jobs/Trails/jobs/pipeline04_scripted/builds/8/changelog527319176490365973.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

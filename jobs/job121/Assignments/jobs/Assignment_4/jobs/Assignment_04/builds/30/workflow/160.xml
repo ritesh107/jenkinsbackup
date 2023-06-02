@@ -1,0 +1,30 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@839.v35e2736cfd5c">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3659.v582dc37621d8">
+    <parentIds>
+      <string>159</string>
+    </parentIds>
+    <id>160</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.ToolStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3659.v582dc37621d8">
+      <arguments>
+        <entry>
+          <string>name</string>
+          <string>Default</string>
+        </entry>
+        <entry>
+          <string>type</string>
+          <string>hudson.plugins.git.GitTool</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1213.v646def1087f9">
+      <startTime>1684851832150</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>
