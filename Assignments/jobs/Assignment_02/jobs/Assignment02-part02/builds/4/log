@@ -1,71 +1,0 @@
-Started by user [8mha:////4KVef2Y2rt1aHG3Ubl730ZXhQB3qCGGZoQc5yMa57M8MAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYe/dLi1CL9osyS1OIMAJg1/OrBAAAA[0mRitesh_Kumar
-Running as SYSTEM
-Building on the built-in node in workspace /var/lib/jenkins/workspace/Assignments/Assignment_02/Assignment02-part02
-No emails were triggered.
-[Assignment02-part02] $ /bin/sh -xe /tmp/jenkins15736488560136612043.sh
-+ yes
-+ sudo apt-get remove nginx
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following packages were automatically installed and are no longer required:
-  libdeflate0 libgd3 libjbig0 libnginx-mod-http-geoip2
-  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
-  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 libtiff5
-  libwebp7 nginx-common nginx-core
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  nginx
-0 upgraded, 0 newly installed, 1 to remove and 10 not upgraded.
-After this operation, 50.2 kB disk space will be freed.
-Do you want to continue? [Y/n] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 67809 files and directories currently installed.)
-Removing nginx (1.18.0-6ubuntu14.3) ...
-+ + yes
-sudo apt-get install nginx
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following NEW packages will be installed:
-  nginx
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (This frontend requires a controlling tty.)
-debconf: falling back to frontend: Teletype
-dpkg-preconfigure: unable to re-open stdin: 
-0 upgraded, 1 newly installed, 0 to remove and 10 not upgraded.
-Need to get 0 B/3882 B of archives.
-After this operation, 50.2 kB of additional disk space will be used.
-Selecting previously unselected package nginx.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 67807 files and directories currently installed.)
-Preparing to unpack .../nginx_1.18.0-6ubuntu14.3_amd64.deb ...
-Unpacking nginx (1.18.0-6ubuntu14.3) ...
-Setting up nginx (1.18.0-6ubuntu14.3) ...
-
-Running kernel seems to be up-to-date.
-
-No services need to be restarted.
-
-No containers need to be restarted.
-
-No user sessions are running outdated binaries.
-
-No VM guests are running outdated hypervisor (qemu) binaries on this host.
-+ pwd
-/var/lib/jenkins/workspace/Assignments/Assignment_02/Assignment02-part02
-+ printf <h1>Ritesh From DevOps Ninja</h1>+ 
-sudo tee /var/www/html/index.nginx-debian.html
-<h1>Ritesh From DevOps Ninja</h1>+ curl localhost
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    33  100    33    0     0  26527      0 --:--:-- --:--:-- --:--:-- 33000
-<h1>Ritesh From DevOps Ninja</h1>Email was triggered for: Always
-Email was triggered for: Success
-Sending email for trigger: Success
-An attempt to send an e-mail to empty list of recipients, ignored.
-Sending email for trigger: Always
-Sending email to: riteshkumar19325@gmail.com
-[Slack Notifications] found #3 as previous completed, non-aborted build
-[Slack Notifications] will send OnSuccessNotification because build matches and user preferences allow it
-Finished: SUCCESS
