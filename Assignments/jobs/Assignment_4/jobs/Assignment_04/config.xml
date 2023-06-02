@@ -1,0 +1,130 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1295.v395eb_7400005">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2131.vb_9788088fdb_5"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2131.vb_9788088fdb_5">
+      <jobProperties/>
+      <triggers/>
+      <parameters>
+        <string>skip_test</string>
+      </parameters>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>For Assignment04</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.7.13">
+      <gitLabConnection></gitLabConnection>
+      <jobCredentialId></jobCredentialId>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>skip_test</name>
+          <description>Tick Skip If You Want To Skip Various Tests</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3659.v582dc37621d8">
+    <script>pipeline {
+    agent any
+    parameters {
+        booleanParam(name: &apos;skip_test&apos;, defaultValue: false, description: &apos;Tick Skip If You Want To Skip Various Tests&apos;)
+    }
+    tools {
+         git &apos;Default&apos;
+         jdk &apos;java&apos;
+        maven &apos;maven&apos;
+    }
+    stages {
+        stage(&apos;Checkout&apos;) {
+            steps {
+              checkout scmGit(branches: [[name: &apos;*/master&apos;], [name: &apos;*/ninja&apos;]], extensions: [], userRemoteConfigs: [[url: &apos;https://github.com/opstree/spring3hibernate.git&apos;]])
+            }
+        }
+        stage(&apos;Build&apos;) {
+            steps {
+                sh &apos;&apos;&apos;mvn clean package&apos;&apos;&apos;
+                // Add commands to build application
+            }
+        }
+         
+        stage(&apos;Test&apos;) {
+            when { expression { params.skip_test != true } }
+            parallel {
+                stage(&apos;Code Stability Tests&apos;) {
+                     
+                    steps {
+                        sh &apos;echo &quot;Running unit tests&quot;&apos;
+                        sh &apos;mvn surefire:test&apos;
+                        
+                        // Add commands to run unit tests
+                    }
+                }
+                stage(&apos;Code Quality Analysis Tests&apos;) {
+                    steps {
+                        sh &apos;echo &quot;Running unit tests&quot;&apos;
+                        sh &apos;mvn checkstyle:checkstyle&apos;
+                        recordIssues(tools: [checkStyle(pattern: &apos;**/checkstyle-result.xml&apos;)])
+                        // Add commands to run unit tests
+                    }
+                }
+                stage(&apos;Code Coverage Tests&apos;) {
+                    steps {
+                        sh &apos;echo &quot;Running integration tests&quot;&apos;
+                        sh &apos;mvn cobertura:cobertura&apos;
+                        recordIssues(tools: [findBugs(pattern: &apos;**/findbugsXml.xml&apos;, useRankAsPriority: true)])
+                        // Add commands to run integration tests
+                    }
+                }
+            }
+        }
+        
+       stage(&apos;Report Generation &apos;) {
+            steps {
+                echo &apos;Generating Report&apos;
+                sh &apos;mvn checkstyle:checkstyle  &gt;&gt;  /var/lib/jenkins/report_checkstyle.html&apos;
+                sh &apos;mvn cobertura:cobertura  &gt;&gt; /var/lib/jenkins/report_cobertura.html&apos;
+            }
+        }
+        stage(&apos;user input&apos;){
+            input {
+                message &apos;Do you want to Archieve the Artifact&apos;
+                ok &apos;Yes&apos;
+                submitter &apos;ritesh&apos;
+               }
+            steps {
+                echo &quot;end&quot;
+                }
+            }
+        stage(&apos;Artifact archieve&apos;) {
+            steps {
+             archiveArtifacts artifacts: &apos;archiveArtifacts artifacts: \&apos;target/*.jar, target/*.war&apos;, followSymlinks: false
+
+                
+            }
+        }
+       
+ }
+    post {
+        success {
+            echo &quot;${env.JOB_NAME}&quot;
+               slackSend channel: &apos;jenkins_report&apos;, color: &apos;#439FE0&apos;, message: &quot;JOB_NAME: ${env.JOB_NAME} BUILD_ID: ${env.BUILD_ID} WORKSPACE: ${env.WORKSPACE} Successful&quot;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;
+               emailext attachLog: true, body: &apos;Pipeline Successfull&apos;, subject: &apos;JOB_NAME:$JOB_NAME BUILD_NUMBER:$BUILD_NUMBER&apos;, to: &apos;riteshkumar19325@gmail.com&apos;
+                  }
+        failure {
+            echo &quot;${env.JOB_NAME}&quot;
+            slackSend channel: &apos;jenkins_report&apos;, color: &apos;#439FE0&apos;, message: &quot;JOB_NAME: ${env.JOB_NAME} BUILD_ID: ${env.BUILD_ID} WORKSPACE: ${env.WORKSPACE} Un-Successful&quot;, teamDomain: &apos;opstree&apos;, tokenCredentialId: &apos;slack-tokenn&apos;, username: &apos;Ritesh Kumar&apos;
+            emailext attachLog: true, body: &apos;Pipeline Unsuccessfull&apos;, subject: &apos;JOB_NAME:$JOB_NAME BUILD_NUMBER:$BUILD_NUMBER BUILD_ID:$BUILD_ID&apos;, to: &apos;riteshkumar19325@gmail.com&apos;
+             }
+        }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
